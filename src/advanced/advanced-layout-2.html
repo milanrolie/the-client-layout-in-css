@@ -7,50 +7,38 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
     body {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 2fr 1fr 2fr 1fr 1fr;
-      grid-template-areas:
-
-
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr .5fr .5fr 1fr 1fr;
+          gap: 5px;
+          grid-template-areas:
           "header"
           "nav"
           "."
           "main"
-          "footer"
-     ;
-       gap: 1em;
-       place-content: center;
+          "footer";
+        }
 
-    }
+        header {
+          grid-area: header;
+          transform: rotate(-20deg);
+          grid-row: 2;
+          height: 110px;
+        }
 
-    header {
-      z-index: 3;
-    grid-area: header;
-    transform: rotate(20deg);
-   grid-row: row 2;
+        nav {
+          grid-area: nav;
+          transform: rotate(20deg);
+          grid-row: 2;
+        }
 
+        main {
+          grid-area: main;
+        }
 
-  
-    }
-
-    nav {
-      z-index: 1;
-      grid-area: nav;
-      transform: rotate(-20deg);
- 
-      grid-row: row 2;
-
-    }
-
-    main {
-      grid-area: main;
-
-    }
-
-    footer {
-      grid-area: footer;
-    }    
+        footer {
+          grid-area: footer;
+        }
     </style>
   </head>
   <body id="advanced-layout-2">
